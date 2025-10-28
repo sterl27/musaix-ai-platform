@@ -1,0 +1,91 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start WordPress Development Environment",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["up", "-d"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Stop WordPress Development Environment",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["down"],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "View WordPress Logs",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["logs", "-f", "wordpress"],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "WP-CLI: Install WordPress",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": [
+        "run", "--rm", "wpcli",
+        "wp", "core", "install",
+        "--url=http://localhost:8080",
+        "--title=Musaix Pro",
+        "--admin_user=admin",
+        "--admin_password=admin123",
+        "--admin_email=admin@example.com"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "WP-CLI: Import XML Data",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": [
+        "exec", "wordpress",
+        "wp", "import", "/var/www/html/musaixpro.WordPress.2025-10-28.xml",
+        "--authors=create"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

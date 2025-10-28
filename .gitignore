@@ -1,0 +1,30 @@
+# Ignore WordPress files that will be auto-generated
+wordpress/
+
+# Ignore Docker volumes
+db_data/
+
+# Ignore environment variables (create .env.example instead)
+.env
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.vscode/settings.json
+.idea/
+
+# Ignore backup files
+*.sql
+*.tar.gz
+backup/
+
+# Ignore temporary files
+tmp/
+temp/
+*.tmp
