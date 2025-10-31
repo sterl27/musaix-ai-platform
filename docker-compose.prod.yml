@@ -1,0 +1,62 @@
+version: '3.8'
+
+# Production Docker Compose Override
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+services:
+  wordpress:
+    environment:
+      # Production security settings
+      WORDPRESS_DEBUG: 0
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_DEBUG', false);
+        define('WP_DEBUG_LOG', false);
+        define('WP_DEBUG_DISPLAY', false);
+        define('SCRIPT_DEBUG', false);
+        define('DISALLOW_FILE_EDIT', true);
+        define('FORCE_SSL_ADMIN', true);
+        define('WP_AUTO_UPDATE_CORE', 'minor');
+    # Remove phpMyAdmin port exposure in production
+    # Use internal network only
+    
+  db:
+    environment:
+      # Production database settings
+      MYSQL_INITDB_SKIP_TZINFO: 1
+    # Add backup volume
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./backups:/backups:ro
+    # Restrict to internal network only
+    networks:
+      - wordpress-network
+    # Remove external port exposure
+    ports: []
+    
+  # Remove phpMyAdmin from production
+  phpmyadmin:
+    profiles:
+      - dev-only
+    
+  # Add production monitoring
+  watchtower:
+    image: containrrr/watchtower:1.7.1
+    container_name: musaixpro_watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_SCHEDULE=0 0 4 * * *  # 4 AM daily
+      - WATCHTOWER_NOTIFICATIONS=email
+    restart: unless-stopped
+    networks:
+      - wordpress-network
+    profiles:
+      - production
+      
+networks:
+  wordpress-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

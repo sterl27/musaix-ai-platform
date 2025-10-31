@@ -1,15 +1,16 @@
 #!/bin/bash
 
 # 🔐 MUSAIX.COM SECURE DEPLOYMENT SCRIPT
-# Your HostGator Password: Energy2024$
+# SECURITY NOTE: Credentials removed from script for security
+# Use environment variables or secure credential storage
 
 echo "🎵 MUSAIX.COM - SECURE DEPLOYMENT WITH AUTHENTICATION"
 echo "=================================================="
 echo ""
 
 echo "🔑 Authentication Details:"
-echo "  Host: acaptade@192.254.189.236"
-echo "  Password: Energy2024$"
+echo "  Host: \${DEPLOY_HOST:-acaptade@192.254.189.236}"
+echo "  Password: \${DEPLOY_PASSWORD:-[SET DEPLOY_PASSWORD ENV VAR]}"
 echo ""
 
 echo "🚀 DEPLOYMENT OPTIONS"
@@ -18,14 +19,14 @@ echo ""
 
 echo "OPTION 1: Upload Scripts via SCP"
 echo "--------------------------------"
-echo "scp server-scripts.tar.gz acaptade@192.254.189.236:~/"
-echo "(Enter password: Energy2024$ when prompted)"
+echo "scp server-scripts.tar.gz \${DEPLOY_HOST}:~/"
+echo "(Enter password when prompted - set DEPLOY_PASSWORD env var)"
 echo ""
 
 echo "OPTION 2: Manual SSH Connection"
 echo "-------------------------------"
-echo "ssh acaptade@192.254.189.236"
-echo "(Enter password: Energy2024$ when prompted)"
+echo "ssh \${DEPLOY_HOST}"
+echo "(Enter password when prompted - set DEPLOY_PASSWORD env var)"
 echo ""
 
 echo "OPTION 3: HostGator cPanel Upload (RECOMMENDED)"

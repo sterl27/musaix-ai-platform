@@ -1,0 +1,275 @@
+{
+  "name": "Musaix Pro Dark Theme Kit",
+  "version": "1.0.0",
+  "description": "Modern dark theme template kit for Musaix Pro music AI platform",
+  "created": "2025-10-29",
+  "author": "Musaix Development Team",
+  
+  "brand_colors": {
+    "primary": "#6366f1",
+    "primary_dark": "#4f46e5",
+    "primary_light": "#818cf8",
+    "accent": "#f59e0b",
+    "accent_dark": "#d97706",
+    "secondary": "#8b5cf6",
+    "background_primary": "#0f0f23",
+    "background_secondary": "#1a1a2e",
+    "background_tertiary": "#16213e",
+    "text_primary": "#f8fafc",
+    "text_secondary": "#cbd5e1",
+    "text_muted": "#94a3b8",
+    "text_accent": "#fbbf24",
+    "border": "#334155",
+    "border_light": "#475569"
+  },
+  
+  "typography": {
+    "primary_font": "Inter",
+    "heading_font": "Poppins",
+    "monospace_font": "JetBrains Mono",
+    "font_sizes": {
+      "h1": "3rem",
+      "h2": "2.25rem",
+      "h3": "1.875rem",
+      "h4": "1.5rem",
+      "h5": "1.25rem",
+      "h6": "1.125rem",
+      "body": "1rem",
+      "small": "0.875rem"
+    },
+    "line_heights": {
+      "heading": "1.2",
+      "body": "1.6",
+      "tight": "1.4"
+    }
+  },
+  
+  "spacing": {
+    "xs": "0.25rem",
+    "sm": "0.5rem",
+    "md": "1rem",
+    "lg": "1.5rem",
+    "xl": "2rem",
+    "2xl": "3rem",
+    "3xl": "4rem"
+  },
+  
+  "shadows": {
+    "sm": "0 2px 4px rgba(0, 0, 0, 0.3)",
+    "md": "0 4px 6px rgba(0, 0, 0, 0.4)",
+    "lg": "0 10px 15px rgba(0, 0, 0, 0.5)",
+    "xl": "0 20px 25px rgba(0, 0, 0, 0.6)"
+  },
+  
+  "border_radius": {
+    "sm": "0.375rem",
+    "md": "0.5rem",
+    "lg": "0.75rem",
+    "xl": "1rem",
+    "full": "9999px"
+  },
+  
+  "page_templates": {
+    "homepage": {
+      "sections": [
+        "hero",
+        "features", 
+        "ai_showcase",
+        "music_player",
+        "testimonials",
+        "pricing",
+        "cta",
+        "footer"
+      ]
+    },
+    "about": {
+      "sections": [
+        "page_header",
+        "about_content",
+        "team",
+        "values",
+        "footer"
+      ]
+    },
+    "services": {
+      "sections": [
+        "page_header",
+        "services_grid",
+        "process",
+        "cta",
+        "footer"
+      ]
+    },
+    "contact": {
+      "sections": [
+        "page_header",
+        "contact_form",
+        "contact_info",
+        "map",
+        "footer"
+      ]
+    },
+    "blog": {
+      "sections": [
+        "page_header",
+        "blog_grid",
+        "sidebar",
+        "footer"
+      ]
+    },
+    "single_post": {
+      "sections": [
+        "post_header",
+        "post_content",
+        "author_bio",
+        "related_posts",
+        "comments",
+        "footer"
+      ]
+    }
+  },
+  
+  "component_styles": {
+    "buttons": {
+      "primary": {
+        "background": "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
+        "color": "#ffffff",
+        "padding": "12px 24px",
+        "border_radius": "8px",
+        "font_weight": "500",
+        "transition": "all 0.3s ease",
+        "hover": {
+          "transform": "translateY(-2px)",
+          "box_shadow": "0 10px 15px rgba(0, 0, 0, 0.5)"
+        }
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "#f8fafc",
+        "border": "2px solid #334155",
+        "padding": "12px 24px",
+        "border_radius": "8px",
+        "font_weight": "500",
+        "transition": "all 0.3s ease",
+        "hover": {
+          "border_color": "#6366f1",
+          "background": "rgba(99, 102, 241, 0.1)"
+        }
+      },
+      "accent": {
+        "background": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+        "color": "#0f0f23",
+        "padding": "12px 24px",
+        "border_radius": "8px",
+        "font_weight": "600",
+        "transition": "all 0.3s ease"
+      }
+    },
+    
+    "cards": {
+      "default": {
+        "background": "#16213e",
+        "border": "1px solid #334155",
+        "border_radius": "12px",
+        "padding": "32px",
+        "box_shadow": "0 2px 4px rgba(0, 0, 0, 0.3)",
+        "transition": "all 0.3s ease",
+        "hover": {
+          "transform": "translateY(-4px)",
+          "box_shadow": "0 10px 15px rgba(0, 0, 0, 0.5)",
+          "border_color": "#6366f1"
+        }
+      },
+      "feature": {
+        "text_align": "center",
+        "padding": "48px 32px",
+        "background": "#16213e",
+        "border": "1px solid #334155",
+        "border_radius": "12px"
+      },
+      "testimonial": {
+        "background": "#1a1a2e",
+        "padding": "24px",
+        "border_radius": "12px",
+        "border_left": "4px solid #6366f1"
+      }
+    },
+    
+    "navigation": {
+      "background": "rgba(15, 15, 35, 0.95)",
+      "backdrop_filter": "blur(10px)",
+      "border_bottom": "1px solid #334155",
+      "item_color": "#cbd5e1",
+      "item_hover_color": "#f8fafc",
+      "item_active_background": "rgba(99, 102, 241, 0.1)"
+    },
+    
+    "forms": {
+      "input": {
+        "background": "#1a1a2e",
+        "border": "2px solid #334155",
+        "border_radius": "8px",
+        "color": "#f8fafc",
+        "padding": "12px 16px",
+        "focus": {
+          "border_color": "#6366f1",
+          "box_shadow": "0 0 0 3px rgba(99, 102, 241, 0.2)"
+        }
+      },
+      "textarea": {
+        "background": "#1a1a2e",
+        "border": "2px solid #334155",
+        "border_radius": "8px",
+        "color": "#f8fafc",
+        "padding": "12px 16px",
+        "min_height": "120px",
+        "resize": "vertical"
+      }
+    }
+  },
+  
+  "section_presets": {
+    "hero": {
+      "background": "linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%)",
+      "padding": "100px 0",
+      "text_align": "center",
+      "min_height": "80vh"
+    },
+    "dark_section": {
+      "background": "#1a1a2e",
+      "padding": "80px 0"
+    },
+    "gradient_section": {
+      "background": "linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%)",
+      "padding": "80px 0"
+    }
+  },
+  
+  "animations": {
+    "fade_in": {
+      "name": "fadeInUp",
+      "duration": "0.6s",
+      "timing": "ease-out",
+      "delay": "0s"
+    },
+    "scale_in": {
+      "name": "scaleIn",
+      "duration": "0.4s",
+      "timing": "ease-out",
+      "delay": "0.2s"
+    },
+    "slide_in_left": {
+      "name": "slideInLeft",
+      "duration": "0.8s",
+      "timing": "ease-out",
+      "delay": "0s"
+    }
+  },
+  
+  "breakpoints": {
+    "mobile": "768px",
+    "tablet": "1024px",
+    "desktop": "1200px",
+    "large": "1400px"
+  }
+}

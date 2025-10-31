@@ -1,0 +1,261 @@
+/*
+Theme Name: Musaix Pro Dark Theme
+Description: A modern dark theme designed specifically for Musaix Pro - AI-powered music creation platform. Features a sleek dark interface with purple/indigo accent colors, professional typography, and music-focused UI components.
+Author: Musaix Pro Team
+Version: 1.0.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: musaix
+Tags: dark, music, ai, modern, responsive, one-column, two-columns, custom-colors, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme is designed for Musaix Pro and includes:
+- Modern dark theme with CSS custom properties
+- Responsive design for all devices  
+- Music player components
+- AI-focused UI elements
+- Professional typography system
+- Custom Elementor integration
+- Security hardened
+*/
+
+/* Theme styles are loaded via musaix-dark-theme.css */
+
+/* Base Theme Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--musaix-font-body, 'Inter', sans-serif);
+    background: var(--musaix-bg-primary, #0f0f23);
+    color: var(--musaix-text-primary, #ffffff);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* WordPress specific styles */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: var(--musaix-bg-secondary);
+    border: 1px solid var(--musaix-border);
+    border-radius: 8px;
+    max-width: 96%;
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 0.9rem;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+    color: var(--musaix-text-secondary);
+}
+
+/* Screen reader text */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: var(--musaix-bg-secondary);
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: var(--musaix-text-primary);
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+/* Comments */
+.comment-content a {
+    word-wrap: break-word;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+/* Galleries */
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+    color: var(--musaix-text-secondary);
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+/* Sticky posts */
+.sticky {
+    display: block;
+}
+
+/* Post formats */
+.format-aside .entry-title,
+.format-image .entry-title,
+.format-video .entry-title,
+.format-quote .entry-title,
+.format-link .entry-title,
+.format-status .entry-title,
+.format-audio .entry-title,
+.format-chat .entry-title {
+    display: none;
+}
+
+/* Responsive embeds */
+.wp-block-embed.is-type-video,
+.wp-block-embed.is-type-rich {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.wp-block-embed.is-type-video iframe,
+.wp-block-embed.is-type-rich iframe,
+.wp-block-embed.is-type-video object,
+.wp-block-embed.is-type-rich object,
+.wp-block-embed.is-type-video embed,
+.wp-block-embed.is-type-rich embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--musaix-primary);
+    outline-offset: 2px;
+}
