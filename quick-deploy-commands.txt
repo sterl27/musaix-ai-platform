@@ -1,0 +1,24 @@
+🚀 MUSAIX PRO V2.0 - QUICK DEPLOYMENT COMMANDS
+
+WEB DISK CONNECTION:
+Windows: \\musaix.com\S73RL
+Mac/Linux: https://musaix.com:2078/S73RL
+Username: S73RL@musaix.com
+Password: Bl@ckbirdSr71
+
+UPLOAD PATH:
+M:\wp-content\themes\musaix-pro\
+
+DATABASE IMPORT:
+File: setup-database.sql
+Location: cPanel → phpMyAdmin → Import
+
+THEME ACTIVATION:
+URL: https://musaix.com/wp-admin
+Login: S73RL / Bl@ckbirdSr71
+Path: Appearance → Themes → Musaix Pro
+
+VERIFICATION URLS:
+Homepage: https://musaix.com
+Training: https://musaix.com/training
+Admin: https://musaix.com/wp-admin

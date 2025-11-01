@@ -1,0 +1,445 @@
+/* 
+ * MUSAIX PRO - DARK THEME DESIGN SYSTEM
+ * Modern UI/UX Design for Music AI Platform
+ * Created: October 2025
+ */
+
+:root {
+  /* Primary Brand Colors */
+  --musaix-primary: #6366f1;        /* Indigo - Main brand */
+  --musaix-primary-dark: #4f46e5;   /* Darker indigo */
+  --musaix-primary-light: #818cf8;  /* Lighter indigo */
+  
+  /* Accent Colors */
+  --musaix-accent: #f59e0b;         /* Amber - Musical energy */
+  --musaix-accent-dark: #d97706;    /* Darker amber */
+  --musaix-secondary: #8b5cf6;      /* Purple - Creative vibes */
+  
+  /* Dark Theme Background */
+  --musaix-bg-primary: #0f0f23;     /* Deep dark blue */
+  --musaix-bg-secondary: #1a1a2e;   /* Secondary dark */
+  --musaix-bg-tertiary: #16213e;    /* Card backgrounds */
+  --musaix-bg-overlay: rgba(15, 15, 35, 0.95);
+  
+  /* Text Colors */
+  --musaix-text-primary: #f8fafc;   /* Primary white text */
+  --musaix-text-secondary: #cbd5e1; /* Secondary gray text */
+  --musaix-text-muted: #94a3b8;     /* Muted text */
+  --musaix-text-accent: #fbbf24;    /* Accent text */
+  
+  /* Border & Dividers */
+  --musaix-border: #334155;         /* Subtle borders */
+  --musaix-border-light: #475569;   /* Lighter borders */
+  --musaix-divider: rgba(148, 163, 184, 0.1);
+  
+  /* Gradients */
+  --musaix-gradient-primary: linear-gradient(135deg, var(--musaix-primary) 0%, var(--musaix-secondary) 100%);
+  --musaix-gradient-accent: linear-gradient(135deg, var(--musaix-accent) 0%, var(--musaix-accent-dark) 100%);
+  --musaix-gradient-dark: linear-gradient(135deg, var(--musaix-bg-primary) 0%, var(--musaix-bg-secondary) 100%);
+  
+  /* Shadows */
+  --musaix-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --musaix-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --musaix-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --musaix-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+  
+  /* Typography */
+  --musaix-font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --musaix-font-heading: 'Poppins', var(--musaix-font-primary);
+  --musaix-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* Spacing */
+  --musaix-space-xs: 0.25rem;
+  --musaix-space-sm: 0.5rem;
+  --musaix-space-md: 1rem;
+  --musaix-space-lg: 1.5rem;
+  --musaix-space-xl: 2rem;
+  --musaix-space-2xl: 3rem;
+  
+  /* Border Radius */
+  --musaix-radius-sm: 0.375rem;
+  --musaix-radius-md: 0.5rem;
+  --musaix-radius-lg: 0.75rem;
+  --musaix-radius-xl: 1rem;
+  
+  /* Transitions */
+  --musaix-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --musaix-transition-fast: all 0.15s ease-in-out;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--musaix-bg-primary);
+  color: var(--musaix-text-primary);
+  font-family: var(--musaix-font-primary);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--musaix-font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--musaix-text-primary);
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.875rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.125rem; }
+
+p {
+  margin: 0 0 var(--musaix-space-md);
+  color: var(--musaix-text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--musaix-primary-light);
+  text-decoration: none;
+  transition: var(--musaix-transition-fast);
+}
+
+a:hover {
+  color: var(--musaix-accent);
+  text-decoration: underline;
+}
+
+/* Buttons */
+.musaix-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--musaix-space-sm) var(--musaix-space-lg);
+  border: none;
+  border-radius: var(--musaix-radius-md);
+  font-family: var(--musaix-font-primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: var(--musaix-transition);
+  text-decoration: none;
+  min-height: 2.5rem;
+  gap: var(--musaix-space-sm);
+}
+
+.musaix-btn-primary {
+  background: var(--musaix-gradient-primary);
+  color: white;
+  box-shadow: var(--musaix-shadow-sm);
+}
+
+.musaix-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--musaix-shadow-md);
+}
+
+.musaix-btn-secondary {
+  background: transparent;
+  color: var(--musaix-text-primary);
+  border: 2px solid var(--musaix-border);
+}
+
+.musaix-btn-secondary:hover {
+  border-color: var(--musaix-primary);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.musaix-btn-accent {
+  background: var(--musaix-gradient-accent);
+  color: var(--musaix-bg-primary);
+  font-weight: 600;
+}
+
+/* Cards */
+.musaix-card {
+  background: var(--musaix-bg-tertiary);
+  border: 1px solid var(--musaix-border);
+  border-radius: var(--musaix-radius-lg);
+  padding: var(--musaix-space-xl);
+  box-shadow: var(--musaix-shadow-sm);
+  transition: var(--musaix-transition);
+}
+
+.musaix-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--musaix-shadow-lg);
+  border-color: var(--musaix-primary);
+}
+
+.musaix-card-header {
+  margin-bottom: var(--musaix-space-lg);
+  padding-bottom: var(--musaix-space-md);
+  border-bottom: 1px solid var(--musaix-divider);
+}
+
+/* Navigation */
+.musaix-nav {
+  background: var(--musaix-bg-overlay);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--musaix-border);
+  padding: var(--musaix-space-sm) 0;
+}
+
+.musaix-nav-item {
+  color: var(--musaix-text-secondary);
+  padding: var(--musaix-space-sm) var(--musaix-space-md);
+  border-radius: var(--musaix-radius-sm);
+  transition: var(--musaix-transition-fast);
+}
+
+.musaix-nav-item:hover,
+.musaix-nav-item.active {
+  color: var(--musaix-text-primary);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+/* Forms */
+.musaix-input {
+  background: var(--musaix-bg-secondary);
+  border: 2px solid var(--musaix-border);
+  border-radius: var(--musaix-radius-md);
+  color: var(--musaix-text-primary);
+  padding: var(--musaix-space-sm) var(--musaix-space-md);
+  font-family: var(--musaix-font-primary);
+  transition: var(--musaix-transition-fast);
+  width: 100%;
+}
+
+.musaix-input:focus {
+  outline: none;
+  border-color: var(--musaix-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.musaix-input::placeholder {
+  color: var(--musaix-text-muted);
+}
+
+/* Sections */
+.musaix-section {
+  padding: var(--musaix-space-2xl) 0;
+}
+
+.musaix-section-dark {
+  background: var(--musaix-bg-secondary);
+}
+
+.musaix-section-gradient {
+  background: var(--musaix-gradient-dark);
+}
+
+/* Hero Section */
+.musaix-hero {
+  background: var(--musaix-gradient-dark);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.musaix-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.musaix-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.musaix-hero h1 {
+  font-size: 4rem;
+  margin-bottom: var(--musaix-space-lg);
+  background: linear-gradient(135deg, var(--musaix-text-primary) 0%, var(--musaix-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Features Grid */
+.musaix-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--musaix-space-xl);
+  margin: var(--musaix-space-2xl) 0;
+}
+
+.musaix-feature {
+  text-align: center;
+  padding: var(--musaix-space-xl);
+}
+
+.musaix-feature-icon {
+  width: 4rem;
+  height: 4rem;
+  background: var(--musaix-gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--musaix-space-lg);
+  font-size: 1.5rem;
+}
+
+/* Music Player UI */
+.musaix-player {
+  background: var(--musaix-bg-tertiary);
+  border: 1px solid var(--musaix-border);
+  border-radius: var(--musaix-radius-xl);
+  padding: var(--musaix-space-lg);
+  box-shadow: var(--musaix-shadow-xl);
+}
+
+.musaix-waveform {
+  background: var(--musaix-bg-secondary);
+  border-radius: var(--musaix-radius-md);
+  height: 120px;
+  margin: var(--musaix-space-md) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.musaix-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--musaix-space-md);
+  margin-top: var(--musaix-space-lg);
+}
+
+.musaix-play-btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--musaix-gradient-primary);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--musaix-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.musaix-play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--musaix-shadow-lg);
+}
+
+/* Animations */
+@keyframes musaix-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes musaix-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.musaix-animate-in {
+  animation: musaix-fade-in 0.6s ease-out;
+}
+
+.musaix-pulse {
+  animation: musaix-pulse 2s infinite;
+}
+
+/* Utility Classes */
+.musaix-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--musaix-space-lg);
+}
+
+.musaix-text-center { text-align: center; }
+.musaix-text-left { text-align: left; }
+.musaix-text-right { text-align: right; }
+
+.musaix-mb-0 { margin-bottom: 0; }
+.musaix-mb-1 { margin-bottom: var(--musaix-space-sm); }
+.musaix-mb-2 { margin-bottom: var(--musaix-space-md); }
+.musaix-mb-3 { margin-bottom: var(--musaix-space-lg); }
+.musaix-mb-4 { margin-bottom: var(--musaix-space-xl); }
+
+.musaix-flex { display: flex; }
+.musaix-grid { display: grid; }
+.musaix-hidden { display: none; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .musaix-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .musaix-features {
+    grid-template-columns: 1fr;
+    gap: var(--musaix-space-lg);
+  }
+  
+  .musaix-container {
+    padding: 0 var(--musaix-space-sm);
+  }
+  
+  .musaix-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* WordPress Specific Overrides */
+body.wp-admin {
+  background: var(--musaix-bg-primary) !important;
+}
+
+.elementor-widget-container {
+  color: inherit;
+}
+
+.elementor-section {
+  position: relative;
+}
+
+/* Dark theme for WordPress admin bar */
+#wpadminbar {
+  background: var(--musaix-bg-primary) !important;
+  border-bottom: 1px solid var(--musaix-border) !important;
+}
+
+#wpadminbar .ab-item {
+  color: var(--musaix-text-secondary) !important;
+}
+
+#wpadminbar .ab-item:hover {
+  color: var(--musaix-text-primary) !important;
+  background: var(--musaix-bg-secondary) !important;
+}
